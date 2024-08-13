@@ -221,7 +221,7 @@ FrameWidgetClass rootFrame {
       }
       PanelWidgetClass BodyContent {
        visible 1
-       clipchildren 0
+       clipchildren 1
        inheritalpha 0
        ignorepointer 0
        color 1 1 1 0.7804
@@ -247,6 +247,7 @@ FrameWidgetClass rootFrame {
          mode blend
         }
         PanelWidgetClass ContentHeader {
+         visible 0
          ignorepointer 1
          position -0.00527 -0.1376
          size 1.00487 0.10591
@@ -257,6 +258,7 @@ FrameWidgetClass rootFrame {
          scaled 0
          {
           TextWidgetClass ContentHeaderText {
+           visible 0
            ignorepointer 0
            position 0.0006 -0.0138
            size 0.98 0.7
@@ -309,7 +311,7 @@ FrameWidgetClass rootFrame {
          ignorepointer 0
          color 0.1333 0.1333 0.1333 1
          position 0.00089 0.06371
-         size 0.97911 0.73442
+         size 0.97911 0.79204
          halign center_ref
          hexactpos 0
          vexactpos 0
@@ -317,8 +319,15 @@ FrameWidgetClass rootFrame {
          vexactsize 0
          "Scrollbar V" 1
          {
-          GridSpacerWidgetClass ContentGrid {
+          WrapSpacerWidgetClass ContentGrid {
+           visible 1
+           disabled 0
+           clipchildren 1
+           inheritalpha 0
            ignorepointer 0
+           ignoregloballv 0
+           keepsafezone 0
+           position 0 0
            size 1 1
            halign center_ref
            hexactpos 0
@@ -326,12 +335,186 @@ FrameWidgetClass rootFrame {
            hexactsize 0
            vexactsize 0
            scaled 0
+           "no focus" 0
            Padding 0
            Margin 0
-           "Size To Content V" 1
            content_halign center
-           Columns 1
-           Rows 2
+           {
+            MultilineTextWidgetClass BodyHeader {
+             clipchildren 0
+             ignorepointer 1
+             color 0.7098 0.4588 0.4196 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "INVISIBLE DANGER"
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular32"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            MultilineTextWidgetClass BodyText {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "Ah yes, the invisible danger lurking everywhere. The dreadful clicking sound eating away at your lifeline. That's right, the most dangerous thing in the Zone is the one you cannot see at all. Well not exactly see, but you can at least detect it. So if you are not a fan of puking out everything you ate this week with your blood mixed in, you better get yourself a Geiger detector. You can use this little tool to know if you are currently in an irradiated area. How can you tell? Well, if you Geiger works properly, I mean it is an electronic device, you need to charge with a battery, it will tell you on the right side of the your screen what is the current mSv/h. That is the metric you will use to tell how much radiation is there ranging from maybe extra finger to bullet to the head is more merciful. Luckily you won't encounter heavily irradiated areas down south in Cordon, but remember, your body doesn't forget. Once you absorb radiation, you need to get rid of it! Either by some recreational stuff like cigarettes, vodka or even joints or more medical stuff like Mexamine pills."
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            PanelWidgetClass BodyDivider {
+             position 0 0
+             size 1 0.05073
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+            MultilineTextWidgetClass BodyText0 {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "But better than glowing like a christmas tree everytime you go scavenging is preventing it from happening in the first place. Well you cannot prevent it 100% without some serious stuff like scientific suits, I mean, this is real life, not some stupid videogame. You can partially shield yourself from the radiation with some proper protection. The most basic stuff is using a gasmask. Proper functional gasmask is a godsend here. On your travels, you will encounter 3 basic types of masks which can take different filters. Those are GP-5, P-2 and GP-7. Gasmasks can take only one specific type of filters. Each filter type has different efficiency and therefore protection from radiation. If I were to describe it, it would be like this:"
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            PanelWidgetClass BodyDivider0 {
+             position 0 0
+             size 1 0.05073
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+            MultilineTextWidgetClass BodyText1 {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "GP-5: Homeopathic prevention"\
+             "P-2: Decent protection, but don't go past Factory (Chenki)"\
+             "GP-7: Can venture north, but probably don't stay there overnight"
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            PanelWidgetClass BodyDivider1 {
+             position 0 0
+             size 1 0.05073
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+            MultilineTextWidgetClass BodyText2 {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "There are some other ways to protect yourself like respirators, which don't need filters, but are also less efficient or Indraline pills, which help you resist absorbing radiation for some time (don't combine it with Mexamine!). Once you get north you might even get some specialized suits."
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            PanelWidgetClass BodyDivider2 {
+             position 0 0
+             size 1 0.05073
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+            MultilineTextWidgetClass BodyText3 {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "The key takeaway is to not under underestimate radiation. If you feel hot and your vision goes blurry, get out of radiation and start popping pills. If you are puking, stop whatever you are doing and immediately start the treatment. If there are wounds opening on your skin, you are fucked, try your hardest to save yourself... Mexamine will still work, but might not be fast enough. Oh and don't forget to take out the filters out of your gasmask, otherwise the next time you want to use the gasmask, you will find the filter empty."
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+            PanelWidgetClass BodyDivider3 {
+             position 0 0
+             size 1 0.05073
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+            }
+            MultilineTextWidgetClass BodyText4 {
+             clipchildren 0
+             ignorepointer 1
+             size 1 1
+             halign center_ref
+             hexactpos 1
+             vexactpos 1
+             hexactsize 0
+             vexactsize 0
+             scaled 0
+             style DayZNormal
+             text "The other way of telling what's your radiation level other than already being fucked is using your Geiger. The old one that everyone has that looks like an iron doesn't allow that, but once you go more north, better Geigers that allow for measuring are plentiful. "
+             font "CRDTN_Core/Data/fonts/Bender/Bender-Regular16"
+             "exact text" 1
+             "size to text h" 0
+             "size to text v" 1
+             wrap 1
+            }
+           }
           }
          }
         }
@@ -352,6 +535,7 @@ FrameWidgetClass rootFrame {
          content_halign right
          {
           ButtonWidgetClass PrimaryActionButton {
+           visible 0
            color 0.1608 0.2627 0.3647 1
            position 30 0
            size 0.1 1

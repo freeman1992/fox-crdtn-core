@@ -77,11 +77,19 @@ class CRDTN_UI_GridItem
 
 	void InitItemPreview()
 	{
-
+		ItemBase item = ItemBase.Cast(m_Item);
 		if (!_initialized)
-		{
-			m_ItemPreview.SetItem(m_Item);
-			m_Item.GetOnItemFlipped().Insert(UpdateFlip);
+		{	
+			if(item.Trade_OriginalEntity)
+			{
+				m_ItemPreview.SetItem(item.Trade_OriginalEntity);
+				// item.Trade_OriginalEntity.GetOnItemFlipped().Insert(UpdateFlip);
+			}
+			else
+			{
+				m_ItemPreview.SetItem(m_Item);
+				m_Item.GetOnItemFlipped().Insert(UpdateFlip);
+			}
 			_initialized = true;
 		}
 
@@ -94,7 +102,14 @@ class CRDTN_UI_GridItem
 		SetPos(col, row);
 		float x, y;
 		m_Root.GetPos(x, y);
-		m_IsFlipped = m_Item.GetInventory().GetFlipCargo();
+
+		if(item.Trade_OriginalEntity)
+		{
+			m_IsFlipped = item.Trade_OriginalEntity.GetInventory().GetFlipCargo();
+		}else
+		{
+			m_IsFlipped = m_Item.GetInventory().GetFlipCargo();
+		}
 		UpdateFlip();
 	}
 

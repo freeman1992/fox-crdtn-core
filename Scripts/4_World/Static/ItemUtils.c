@@ -1,3 +1,5 @@
+typedef CRDTN_Core_ItemUtils ItemUtils;
+
 class CRDTN_Core_ItemUtils
 {
     static EntityAI SpawnItem(CRDTN_Item item, string position, string orientation)

@@ -75,6 +75,8 @@ class CRDTN_UI_GridItem
 		return CFG_CRDTN_UI_Layout_Grid_Item;
 	}
 
+	/// @brief Mainly used for the Trading System 
+	// Will probably remove this later 
 	void InitItemPreview()
 	{
 		ItemBase item = ItemBase.Cast(m_Item);
